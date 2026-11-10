@@ -12,8 +12,8 @@
   --letter: #111111;     /* main text, rules, outlines, focus rings */
   --on-letter: #ffffff;  /* text that sits on black */
   --letter-2: #22313b;   /* supporting text */
-  --signal: #f2cf3a;     /* yellow. Used in two places only: the highlight
-                            behind "Massachusetts" and the main button. */
+  --signal: #f2cf3a;     /* yellow. Marks where you act: the Practice area
+                            of the lesson illustration, and buttons. */
   --on-signal: #111111;  /* text that sits on yellow */
 
   /* Type: family and weights */
@@ -24,8 +24,8 @@
   --w-medium: 500;       /* supporting lines */
 
   /* Type: sizes, largest first */
-  --display-1: clamp(2.75rem, 7.4vw, 6rem);     /* page headline */
-  --display-1-small: clamp(2.125rem, 10.4vw, 2.75rem); /* page headline on narrow phones */
+  --display-1: clamp(2.5rem, 4.4vw, 4rem);      /* page headline */
+  --display-1-small: clamp(1.875rem, 9.6vw, 2.5rem); /* page headline on narrow phones */
   --display-2: clamp(2.125rem, 4.4vw, 3.5rem);  /* section headings */
   --display-3: clamp(1.625rem, 3vw, 2.5rem);    /* Get involved row names */
   --display-4: clamp(1.75rem, 3vw, 2.375rem);   /* About and Contact headings */

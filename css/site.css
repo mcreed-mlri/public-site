@@ -98,32 +98,25 @@ a { color: inherit; }
   text-underline-offset: 0.35em;
 }
 
-/* Opening statement */
-.opening { padding: clamp(2.5rem, 7vw, 5.25rem) var(--gutter) clamp(2.75rem, 6vw, 4.75rem); }
+/* Opening: the headline beside one sample lesson screen. */
+.opening {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2.5rem 4rem;
+  align-items: center;
+  padding: clamp(2.5rem, 6vw, 4.5rem) var(--gutter) clamp(2.75rem, 6vw, 4.75rem);
+}
+/* 9.6em keeps "Practical training" together and breaks the line before "for". */
 .opening h1 {
-  max-width: 13em;
+  max-width: 9.6em;
   font-weight: var(--w-black);
   font-size: var(--display-1);
   line-height: 1.02;
   letter-spacing: -0.03em;
   text-wrap: balance;
-  isolation: isolate;
 }
-/* "Massachusetts" sits on a yellow highlight, tucked behind the lines above and below it. */
-.opening h1 em {
-  position: relative;
-  z-index: -1;
-  font-style: normal;
-  margin-left: -0.12em;
-  padding: 0.02em 0.12em 0;
-  background: var(--signal);
-  color: var(--on-signal);
-  border-radius: var(--radius);
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-}
-.opening p {
-  max-width: 34em;
+.opening-text p {
+  max-width: 30em;
   padding-top: 1.5rem;
   font-size: var(--lede);
   line-height: 1.4;
@@ -164,43 +157,74 @@ h2 {
   text-wrap: balance;
 }
 
-/* Training: a paragraph beside three ruled rows. */
-.fit {
-  display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  gap: 2rem 4rem;
-  align-items: start;
+/* Lesson wireframe: one drawn screen, split into Learn, Practice and Refer back. */
+.lesson { margin: 0; }
+.screen {
+  border: var(--rule) solid var(--letter);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--band);
 }
-.fit p {
-  max-width: 24em;
-  padding-top: 1.125rem;
-  font-size: var(--text-large);
-  color: var(--letter-2);
+.screen-bar {
+  padding: 0.75rem 1.25rem 0.625rem;
+  border-bottom: var(--rule) solid var(--letter);
+  font-size: var(--text-note);
+  font-weight: var(--w-bold);
 }
-
-.offer { margin: 0; }
-.offer div {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-  gap: 0.25rem 2.5rem;
-  align-items: baseline;
-  padding: 1.375rem 0 1.25rem;
+.screen-bar span { padding-inline: 0.375rem; color: var(--letter-2); }
+.zone { padding: 1.25rem 1.25rem 1.5rem; }
+.practice {
+  background: var(--signal);
+  color: var(--on-signal);
 }
-.offer div:first-child { padding-top: 0; }
-.offer div:last-child { padding-bottom: 0; }
-.offer div + div { border-top: var(--rule) solid var(--letter); }
-.offer dt {
+.zone + .zone { border-top: var(--rule) solid var(--letter); }
+.zone-name {
   font-weight: var(--w-heavy);
-  font-size: var(--display-3);
+  font-size: var(--title);
   line-height: 1.2;
   letter-spacing: -0.01em;
 }
-.offer dd {
-  margin: 0;
-  font-size: var(--text-large);
-  line-height: 1.4;
+.zone p:not(.zone-name) { padding-top: 0.5rem; line-height: 1.4; }
+.zone .zone-title { padding-top: 0.75rem; font-weight: var(--w-bold); }
+/* The advocate's response stays closed until the visitor has thought it through. */
+.reveal { margin-top: 0.875rem; }
+.reveal summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 0.875rem 0.375rem;
+  background: var(--band);
+  border: var(--rule) solid var(--letter);
+  border-radius: var(--radius);
+  font-weight: var(--w-bold);
+  cursor: pointer;
+  list-style: none;
+}
+.reveal summary::-webkit-details-marker { display: none; }
+.reveal summary:hover { background: var(--field); }
+.reveal .arrow { width: 1.25rem; height: 1.25rem; transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+.reveal[open] .arrow { transform: rotate(90deg); }
+.zone .reveal p {
+  margin-top: 0.75rem;
+  padding: 0.75rem 0.875rem 0.625rem;
+  background: var(--band);
+  border: var(--rule) solid var(--letter);
+  border-radius: var(--radius);
+}
+/* Learn and Refer back are single lines around the practice block. */
+.line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.125rem 0.875rem;
+  padding: 0.75rem 1.25rem 0.625rem;
+  line-height: 1.35;
+}
+.line .zone-name { font-size: var(--text); }
+.lesson figcaption {
+  padding-top: 0.75rem;
+  font-size: var(--text-note);
   color: var(--letter-2);
-  text-wrap: balance;
 }
 
 /* Skills: four example training areas of equal weight, then one shared ask. */
@@ -261,7 +285,7 @@ h2 {
   text-decoration: none;
   transition: padding-left 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s;
 }
-.rows a:hover { padding-left: 1.25rem; background: var(--field); }
+.rows a:hover { padding-left: 1.25rem; background: var(--band); }
 .rows b {
   font-weight: var(--w-heavy);
   font-size: var(--display-3);
@@ -286,7 +310,7 @@ h2 {
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: 2.5rem 4rem;
-  padding: var(--section) 0;
+  padding-block: var(--section);
 }
 .closing h2 { font-size: var(--display-4); }
 .closing p {
@@ -304,11 +328,7 @@ h2 {
 .closing a:hover, .site-footer a:hover { text-decoration-thickness: 3px; }
 
 /* Footer */
-.site-footer {
-  background: var(--band);
-  border-top: var(--rule) solid var(--letter);
-  font-size: var(--text-small);
-}
+.site-footer { font-size: var(--text-small); }
 .site-footer .wrap {
   display: flex;
   flex-wrap: wrap;
@@ -317,8 +337,13 @@ h2 {
   padding: 1.625rem var(--gutter) 1.5rem;
 }
 
+@media (max-width: 64rem) {
+  .opening { grid-template-columns: minmax(0, 1fr); }
+  .lesson { max-width: 40rem; }
+}
+
 @media (max-width: 54rem) {
-  .fit, .closing, .rows a, .offer div { grid-template-columns: minmax(0, 1fr); }
+  .closing, .rows a { grid-template-columns: minmax(0, 1fr); }
   .areas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .areas > li:nth-child(3) { padding-left: 0; border-left: 0; }
   .areas > li:nth-child(n+3) { border-top: var(--rule) solid var(--letter); }
@@ -337,7 +362,7 @@ h2 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .button, .rows a { transition: none; }
+  .button, .rows a, .reveal .arrow { transition: none; }
 }
 
 /*
