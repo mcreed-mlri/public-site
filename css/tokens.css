@@ -1,0 +1,50 @@
+/*
+  Design tokens. Every colour, font, size, weight and radius the site uses is
+  set here. These are an interim look until the design guide arrives: change
+  values in this file only, and the whole site follows.
+*/
+:root {
+  color-scheme: light;
+
+  /* Colour */
+  --field: #b8d8ee;      /* page background, sky blue */
+  --band: #ffffff;       /* white bands, the footer */
+  --letter: #111111;     /* main text, rules, outlines, focus rings */
+  --on-letter: #ffffff;  /* text that sits on black */
+  --letter-2: #22313b;   /* supporting text */
+  --signal: #f2cf3a;     /* yellow. Used in two places only: the highlight
+                            behind "Massachusetts" and the main button. */
+  --on-signal: #111111;  /* text that sits on yellow */
+
+  /* Type: family and weights */
+  --sans: "Rubik", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --w-black: 900;        /* headline, section headings, button */
+  --w-heavy: 800;        /* row names, table headings */
+  --w-bold: 700;         /* navigation */
+  --w-medium: 500;       /* supporting lines */
+
+  /* Type: sizes, largest first */
+  --display-1: clamp(2.75rem, 7.4vw, 6rem);     /* page headline */
+  --display-1-small: clamp(2.125rem, 10.4vw, 2.75rem); /* page headline on narrow phones */
+  --display-2: clamp(2.125rem, 4.4vw, 3.5rem);  /* section headings */
+  --display-3: clamp(1.625rem, 3vw, 2.5rem);    /* Get involved row names */
+  --display-4: clamp(1.75rem, 3vw, 2.375rem);   /* About and Contact headings */
+  --lede: clamp(1.25rem, 2vw, 1.6875rem);       /* line under the headline */
+  --title: 1.5rem;       /* name in the masthead, button, table cells */
+  --text-large: 1.375rem;
+  --text: 1.1875rem;
+  --text-nav: 1.125rem;
+  --text-small: 1.0625rem;
+  --text-note: 0.9375rem;
+  --leading: 1.5;
+
+  /* Shape and space */
+  --rule: 3px;           /* thickness of the dividing lines and outlines */
+  --rule-thin: 1.5px;    /* not used at the moment */
+  --radius: 8px;
+  --radius-large: 10px;  /* not used at the moment */
+  --radius-small: 4px;   /* focus rings */
+  --page: 90rem;         /* widest the layout gets */
+  --gutter: clamp(1.25rem, 4.5vw, 4rem);
+  --section: clamp(3rem, 6vw, 5rem);
+}

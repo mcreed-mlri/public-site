@@ -1,0 +1,352 @@
+/* Layout and components. Values come from tokens.css. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: 1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body {
+  margin: 0;
+  background: var(--field);
+  color: var(--letter);
+  font-family: var(--sans);
+  font-size: var(--text);
+  line-height: var(--leading);
+}
+
+::selection { background: var(--letter); color: var(--on-letter); }
+
+h1, h2, h3, p, ul, ol { margin: 0; }
+p { text-wrap: pretty; }
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 3px solid var(--letter);
+  outline-offset: 4px;
+  border-radius: var(--radius-small);
+}
+
+.wrap {
+  max-width: var(--page);
+  margin-inline: auto;
+  padding: 0 var(--gutter);
+}
+
+/* Skip link: hidden until focused from the keyboard. */
+.skip {
+  position: absolute;
+  left: var(--gutter);
+  top: 0;
+  transform: translateY(-130%);
+  background: var(--letter);
+  color: var(--on-letter);
+  font-weight: var(--w-bold);
+  padding: 0.75rem 1.125rem;
+  border-radius: 0 0 var(--radius) var(--radius);
+  text-decoration: none;
+}
+.skip:focus { transform: none; }
+
+/* Masthead */
+.mast {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  padding: 1.25rem 0 1.125rem;
+  border-bottom: var(--rule) solid var(--letter);
+}
+.wordmark {
+  display: block;
+  font-weight: var(--w-black);
+  font-size: var(--title);
+  line-height: 1.3;
+  text-decoration: none;
+}
+.mast-note {
+  font-size: var(--text-note);
+  line-height: 1.4;
+  color: var(--letter-2);
+}
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 2.125rem;
+  padding: 0;
+  list-style: none;
+  font-weight: var(--w-bold);
+  font-size: var(--text-nav);
+}
+.site-nav a {
+  display: block;
+  padding: 0.375rem 0;
+  text-decoration: none;
+}
+.site-nav a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.35em;
+}
+
+/* Opening statement */
+.opening { padding: clamp(2.5rem, 7vw, 5.25rem) var(--gutter) clamp(2.75rem, 6vw, 4.75rem); }
+.opening h1 {
+  max-width: 13em;
+  font-weight: var(--w-black);
+  font-size: var(--display-1);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+  isolation: isolate;
+}
+/* "Massachusetts" sits on a yellow highlight, tucked behind the lines above and below it. */
+.opening h1 em {
+  position: relative;
+  z-index: -1;
+  font-style: normal;
+  margin-left: -0.12em;
+  padding: 0.02em 0.12em 0;
+  background: var(--signal);
+  color: var(--on-signal);
+  border-radius: var(--radius);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.opening p {
+  max-width: 34em;
+  padding-top: 1.5rem;
+  font-size: var(--lede);
+  line-height: 1.4;
+  font-weight: var(--w-medium);
+  color: var(--letter-2);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 2.125rem;
+  padding: 1.25rem 1.875rem 1rem;
+  background: var(--signal);
+  color: var(--on-signal);
+  border: var(--rule) solid var(--letter);
+  border-radius: var(--radius);
+  font-weight: var(--w-black);
+  font-size: var(--title);
+  line-height: 1.3;
+  text-decoration: none;
+  transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.button:hover { background: var(--band); }
+.button:focus-visible { border-radius: var(--radius); }
+
+/* Sections */
+.section { padding: var(--section) 0; }
+.band {
+  background: var(--band);
+  border-top: var(--rule) solid var(--letter);
+  border-bottom: var(--rule) solid var(--letter);
+}
+
+h2 {
+  font-weight: var(--w-black);
+  font-size: var(--display-2);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* Training: a paragraph beside three ruled rows. */
+.fit {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 2rem 4rem;
+  align-items: start;
+}
+.fit p {
+  max-width: 24em;
+  padding-top: 1.125rem;
+  font-size: var(--text-large);
+  color: var(--letter-2);
+}
+
+.offer { margin: 0; }
+.offer div {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: 0.25rem 2.5rem;
+  align-items: baseline;
+  padding: 1.375rem 0 1.25rem;
+}
+.offer div:first-child { padding-top: 0; }
+.offer div:last-child { padding-bottom: 0; }
+.offer div + div { border-top: var(--rule) solid var(--letter); }
+.offer dt {
+  font-weight: var(--w-heavy);
+  font-size: var(--display-3);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.offer dd {
+  margin: 0;
+  font-size: var(--text-large);
+  line-height: 1.4;
+  color: var(--letter-2);
+  text-wrap: balance;
+}
+
+/* Skills: four example training areas of equal weight, then one shared ask. */
+.intro {
+  max-width: 30em;
+  padding-top: 1.125rem;
+  font-size: var(--text-large);
+  color: var(--letter-2);
+}
+.areas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 2.25rem;
+  padding: 0;
+  list-style: none;
+  border-top: var(--rule) solid var(--letter);
+  border-bottom: var(--rule) solid var(--letter);
+}
+.areas > li { padding: 1.5rem 1.5rem 1.75rem 0; }
+.areas > li + li {
+  padding-left: 1.5rem;
+  border-left: var(--rule) solid var(--letter);
+}
+.areas h3 {
+  font-weight: var(--w-heavy);
+  font-size: 1.75rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.areas p {
+  padding-top: 0.75rem;
+  line-height: 1.45;
+  color: var(--letter-2);
+}
+.ask {
+  padding-top: 1.75rem;
+  font-weight: var(--w-heavy);
+  font-size: var(--display-3);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* Get involved: flat rows, each one a link. */
+.rows {
+  margin-top: 2.25rem;
+  padding: 0;
+  list-style: none;
+  border-top: var(--rule) solid var(--letter);
+}
+.rows a {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 0.25rem 4rem;
+  align-items: center;
+  padding: 1.375rem 0 1.25rem;
+  border-bottom: var(--rule) solid var(--letter);
+  text-decoration: none;
+  transition: padding-left 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s;
+}
+.rows a:hover { padding-left: 1.25rem; background: var(--field); }
+.rows b {
+  font-weight: var(--w-heavy);
+  font-size: var(--display-3);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+/* The sentence and its arrow share the right-hand column. */
+.rows span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-right: 1rem;
+  font-size: var(--text-large);
+  line-height: 1.4;
+  color: var(--letter-2);
+}
+.arrow { flex: none; width: 2.5rem; height: 2.5rem; color: var(--letter); }
+
+/* About and contact */
+.closing {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 2.5rem 4rem;
+  padding: var(--section) 0;
+}
+.closing h2 { font-size: var(--display-4); }
+.closing p {
+  max-width: 30em;
+  padding-top: 0.875rem;
+  font-size: var(--text-large);
+  color: var(--letter-2);
+}
+.closing a, .site-footer a {
+  color: var(--letter);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+.closing a:hover, .site-footer a:hover { text-decoration-thickness: 3px; }
+
+/* Footer */
+.site-footer {
+  background: var(--band);
+  border-top: var(--rule) solid var(--letter);
+  font-size: var(--text-small);
+}
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.375rem 2rem;
+  padding: 1.625rem var(--gutter) 1.5rem;
+}
+
+@media (max-width: 54rem) {
+  .fit, .closing, .rows a, .offer div { grid-template-columns: minmax(0, 1fr); }
+  .areas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .areas > li:nth-child(3) { padding-left: 0; border-left: 0; }
+  .areas > li:nth-child(n+3) { border-top: var(--rule) solid var(--letter); }
+}
+
+@media (max-width: 30rem) {
+  .site-nav ul { gap: 0.25rem 1.25rem; font-size: 1rem; }
+  .opening h1 { font-size: var(--display-1-small); }
+  .button { padding: 0.9375rem 1rem 0.8125rem; font-size: clamp(1rem, 5vw, 1.25rem); }
+  .areas { grid-template-columns: minmax(0, 1fr); }
+  .areas > li + li {
+    padding-left: 0;
+    border-left: 0;
+    border-top: var(--rule) solid var(--letter);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button, .rows a { transition: none; }
+}
+
+/*
+  Placeholder marker. Anything still waiting on the team or the design firm
+  has a data-todo attribute and gets a dotted underline while this is a sketch.
+  Delete this rule at launch.
+*/
+[data-todo] {
+  text-decoration: underline dotted var(--letter) 2px;
+  text-underline-offset: 0.3em;
+}
+.closing [data-todo] { color: var(--letter); font-weight: var(--w-bold); }
