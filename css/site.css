@@ -204,6 +204,16 @@ h2 {
 .reveal summary:hover { background: var(--field); }
 .reveal .arrow { width: 1.25rem; height: 1.25rem; transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
 .reveal[open] .arrow { transform: rotate(90deg); }
+/* Browsers without ::details-content simply open the response without the slide. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { interpolate-size: allow-keywords; }
+  .reveal::details-content {
+    block-size: 0;
+    overflow: hidden;
+    transition: block-size 0.35s cubic-bezier(0.16, 1, 0.3, 1), content-visibility 0.35s allow-discrete;
+  }
+  .reveal[open]::details-content { block-size: auto; }
+}
 .zone .reveal p {
   margin-top: 0.75rem;
   padding: 0.75rem 0.875rem 0.625rem;
