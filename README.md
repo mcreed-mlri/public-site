@@ -42,7 +42,7 @@ Find and replace `[Center name]` across `index.html`. It appears three times.
 
 ### Apply the design guide
 
-Change the values in `css/tokens.css`. Also keep the `theme-color` line near the top of `index.html` and the placeholder favicon colors in sync. If the font changes, put the new font files in `fonts/`, update `css/fonts.css`, and update the preload links near the top of `index.html`. The current typeface is self-hosted Source Sans 3 at weights 400, 600 and 700.
+Change the values in `css/tokens.css`. Also keep the `theme-color` line near the top of `index.html` and the placeholder favicon colors in sync. If the font changes, put the new font files in `fonts/`, update `css/fonts.css`, and update the preload links near the top of `index.html`. The current typeface is self-hosted Geist (one variable file, weights 100–900), the same as the Learning Hub. Colors and fonts copy the Learning Hub's `app/globals.css` so the two feel like one place; change them there first.
 
 The palette uses warm cream (`#faf5eb`) for the main background, ink (`#172d35`) for text and the Get involved section, and clear blue (`#c8dde5`) for the training band. The sample lesson uses a stronger blue (`#a9d1e0`), with a cream frame and ink header. Deep green (`#176b57`) marks the primary action; mint (`#bceacb`) highlights Practice, dark-section arrows and interaction states. Text links use blue (`#285f85`) on light backgrounds and mint in the ink footer. The primary button turns ink on hover while retaining its light text.
 
