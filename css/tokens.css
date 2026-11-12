@@ -6,22 +6,27 @@
 :root {
   color-scheme: light;
 
-  /* Colour: ink on warm paper, blue sections, green actions, mint accents. */
-  --field: #faf5eb;      /* warm cream, main page background */
-  --band: #c8dde5;       /* clear blue, section bands and sample lesson */
-  --letter: #172d35;     /* ink, main text, rules and focus rings */
-  --on-letter: #faf5eb;  /* cream text on ink */
-  --letter-2: #344b53;   /* supporting text on paper and blue */
-  --signal: #176b57;     /* deep green, primary actions */
-  --on-signal: #faf5eb;  /* cream text on green */
-  --highlight: #bceacb;  /* fresh mint, practice and interaction highlights */
-  --accent-blue: #a9d1e0; /* stronger blue, the interactive lesson */
-  --link: #285f85;       /* blue, text links */
+  /* Colour: the Learning Hub's palette (its ADR 0015), so the jump from this
+     site into the hub feels like one place. Warm ink on warm paper, sky as the
+     one accent, ink pills for actions. Copy changes from the hub's
+     app/globals.css rather than inventing values here. */
+  --field: #fbf7f0;      /* warm paper, main page background (hub --paper) */
+  --band: #dcedf2;       /* pale sky, section bands (hub --brand-tint) */
+  --letter: #221e1b;     /* warm ink, text, rules, dark bands (hub --ink) */
+  --on-letter: #fbf7f0;  /* paper text on ink */
+  --letter-2: #4a433d;   /* supporting text on paper and sky (hub --ink-muted) */
+  --signal: #221e1b;     /* primary actions are ink pills, as in the hub */
+  --on-signal: #fbf7f0;  /* paper text on ink */
+  --highlight: #bfdde6;  /* sky, the one accent: hub link, hovers, eyebrows on ink */
+  --accent-blue: #bfdde6; /* sky, the practice block in the sample lesson */
+  --link: #1f5f7a;       /* deep sky, text links (hub --brand) */
 
   /* Type: family and weights */
-  --sans: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --w-black: 700;        /* headline and section headings */
-  --w-heavy: 600;        /* row names, table headings */
+  /* Geist, as in the Learning Hub. Heavy and tight for headings, the same
+     voice as the hub's page titles. */
+  --sans: "Geist", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --w-black: 800;        /* headline and section headings */
+  --w-heavy: 700;        /* row names, table headings */
   --w-bold: 600;         /* navigation and buttons */
   --w-medium: 400;       /* supporting lines */
 
@@ -42,8 +47,10 @@
 
   /* Shape and space */
   --rule: 1.5px;         /* fine ink-like dividing lines and outlines */
+  --rule-heavy: 3px;     /* the line under the masthead, as in the hub */
+  --outline: 2px;        /* pills and framed cards */
   --rule-thin: 1.5px;    /* not used at the moment */
-  --radius: 8px;
+  --radius: 14px;        /* cards and the lesson screen, as in the hub */
   --radius-pill: 999px;  /* primary call to action */
   --radius-large: 10px;  /* not used at the moment */
   --radius-small: 4px;   /* focus rings */
