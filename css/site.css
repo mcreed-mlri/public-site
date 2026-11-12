@@ -53,9 +53,17 @@ a { color: inherit; }
   border-radius: 0 0 var(--radius) var(--radius);
   text-decoration: none;
 }
-.skip:focus { transform: none; }
+.skip:focus { transform: none; outline-color: var(--highlight); }
 
 /* Masthead */
+.site-header {
+  background: var(--letter);
+  color: var(--on-letter);
+}
+.site-header :focus-visible { outline-color: var(--highlight); }
+.site-header a:focus-visible { color: var(--highlight); }
+.site-header ::selection { background: var(--highlight); color: var(--letter); }
+.site-header [data-todo] { text-decoration-color: currentColor; }
 .mast {
   display: flex;
   flex-wrap: wrap;
@@ -63,7 +71,6 @@ a { color: inherit; }
   justify-content: space-between;
   gap: 0.75rem 2rem;
   padding: 1.25rem 0 1.125rem;
-  border-bottom: var(--rule) solid var(--letter);
 }
 .wordmark {
   display: block;
@@ -75,7 +82,7 @@ a { color: inherit; }
 .mast-note {
   font-size: var(--text-note);
   line-height: 1.4;
-  color: var(--letter-2);
+  color: var(--band);
 }
 
 .site-nav ul {
@@ -94,9 +101,10 @@ a { color: inherit; }
 }
 .site-nav .soon {
   padding: 0.375rem 0;
-  color: var(--letter-2);
+  color: var(--band);
 }
 .site-nav a:hover {
+  color: var(--highlight);
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 0.35em;
@@ -110,15 +118,16 @@ a { color: inherit; }
   align-items: center;
   padding: clamp(2.5rem, 6vw, 4.5rem) var(--gutter) clamp(2.75rem, 6vw, 4.75rem);
 }
-/* 9.6em keeps "Practical training" together and breaks the line before "for". */
+/* Short, large statements lead the page without relying on photography. */
 .opening h1 {
-  max-width: 9.6em;
+  max-width: 10ch;
   font-weight: var(--w-black);
   font-size: var(--display-1);
-  line-height: 1.02;
+  line-height: 0.98;
   letter-spacing: -0.03em;
   text-wrap: balance;
 }
+.opening h1 span { display: block; }
 .opening-text p {
   max-width: 30em;
   padding-top: 1.5rem;
@@ -135,15 +144,15 @@ a { color: inherit; }
   background: var(--signal);
   color: var(--on-signal);
   border: var(--rule) solid var(--letter);
-  border-radius: var(--radius);
-  font-weight: var(--w-black);
+  border-radius: var(--radius-pill);
+  font-weight: var(--w-bold);
   font-size: var(--title);
   line-height: 1.3;
   text-decoration: none;
   transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.button:hover { background: var(--band); }
-.button:focus-visible { border-radius: var(--radius); }
+.button:hover { background: var(--letter); }
+.button:focus-visible { border-radius: var(--radius-pill); }
 
 /* Sections */
 .section { padding: var(--section) 0; }
@@ -167,19 +176,26 @@ h2 {
   border: var(--rule) solid var(--letter);
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--band);
+  background: var(--field);
 }
 .screen-bar {
+  background: var(--letter);
+  color: var(--on-letter);
   padding: 0.75rem 1.25rem 0.625rem;
   border-bottom: var(--rule) solid var(--letter);
   font-size: var(--text-note);
   font-weight: var(--w-bold);
 }
-.screen-bar span { padding-inline: 0.375rem; color: var(--letter-2); }
+.screen-bar span { padding-inline: 0.375rem; color: inherit; }
 .zone { padding: 1.25rem 1.25rem 1.5rem; }
 .practice {
-  background: var(--signal);
-  color: var(--on-signal);
+  background: var(--accent-blue);
+  color: var(--letter);
+}
+.practice > .zone-name {
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  background: var(--highlight);
 }
 .zone + .zone { border-top: var(--rule) solid var(--letter); }
 .zone-name {
@@ -197,7 +213,7 @@ h2 {
   align-items: center;
   gap: 0.625rem;
   padding: 0.5rem 0.875rem 0.375rem;
-  background: var(--band);
+  background: var(--field);
   border: var(--rule) solid var(--letter);
   border-radius: var(--radius);
   font-weight: var(--w-bold);
@@ -205,7 +221,7 @@ h2 {
   list-style: none;
 }
 .reveal summary::-webkit-details-marker { display: none; }
-.reveal summary:hover { background: var(--field); }
+.reveal summary:hover { background: var(--highlight); }
 .reveal .arrow { width: 1.25rem; height: 1.25rem; transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
 .reveal[open] .arrow { transform: rotate(90deg); }
 /* Browsers without ::details-content simply open the response without the slide. */
@@ -221,7 +237,7 @@ h2 {
 .zone .reveal p {
   margin-top: 0.75rem;
   padding: 0.75rem 0.875rem 0.625rem;
-  background: var(--band);
+  background: var(--field);
   border: var(--rule) solid var(--letter);
   border-radius: var(--radius);
 }
@@ -283,6 +299,31 @@ h2 {
 }
 
 /* Get involved: flat rows, each one a link. */
+.ink-section {
+  background: var(--letter);
+  color: var(--on-letter);
+  padding-block: clamp(4rem, 8vw, 7rem);
+}
+.eyebrow {
+  margin-bottom: 1.25rem;
+  font-size: var(--text-small);
+  font-weight: var(--w-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.ink-section .eyebrow { color: var(--highlight); }
+.ink-section h2 { max-width: 17ch; }
+.ink-section .intro, .ink-section .rows span { color: var(--band); }
+.ink-section .rows, .ink-section .rows a { border-color: var(--band); }
+.ink-section .arrow { color: var(--highlight); }
+.ink-section .rows a:hover, .ink-section .rows a:focus-visible {
+  background: var(--highlight);
+  color: var(--letter);
+}
+.ink-section .rows a:hover span, .ink-section .rows a:focus-visible span,
+.ink-section .rows a:hover .arrow, .ink-section .rows a:focus-visible .arrow { color: var(--letter); }
+.ink-section :focus-visible { outline-color: var(--highlight); }
+.ink-section ::selection { background: var(--highlight); color: var(--letter); }
 .rows {
   margin-top: 2.25rem;
   padding: 0;
@@ -320,6 +361,7 @@ h2 {
 .arrow { flex: none; width: 2.5rem; height: 2.5rem; color: var(--letter); }
 
 /* About and contact */
+.closing-band { background: var(--field); }
 .closing {
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
@@ -334,7 +376,7 @@ h2 {
   color: var(--letter-2);
 }
 .closing a, .site-footer a {
-  color: var(--letter);
+  color: var(--link);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.25em;
@@ -342,7 +384,13 @@ h2 {
 .closing a:hover, .site-footer a:hover { text-decoration-thickness: 3px; }
 
 /* Footer */
-.site-footer { font-size: var(--text-small); }
+.site-footer {
+  font-size: var(--text-small);
+  background: var(--letter);
+  color: var(--on-letter);
+}
+.site-footer a { color: var(--highlight); }
+.site-footer :focus-visible { outline-color: var(--highlight); }
 .site-footer .wrap {
   display: flex;
   flex-wrap: wrap;

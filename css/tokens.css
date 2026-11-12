@@ -6,27 +6,29 @@
 :root {
   color-scheme: light;
 
-  /* Colour */
-  --field: #b8d8ee;      /* page background, sky blue */
-  --band: #ffffff;       /* white bands, the footer */
-  --letter: #111111;     /* main text, rules, outlines, focus rings */
-  --on-letter: #ffffff;  /* text that sits on black */
-  --letter-2: #22313b;   /* supporting text */
-  --signal: #f2cf3a;     /* yellow. Marks where you act: the Practice area
-                            of the lesson illustration, and buttons. */
-  --on-signal: #111111;  /* text that sits on yellow */
+  /* Colour: ink on warm paper, blue sections, green actions, mint accents. */
+  --field: #faf5eb;      /* warm cream, main page background */
+  --band: #c8dde5;       /* clear blue, section bands and sample lesson */
+  --letter: #172d35;     /* ink, main text, rules and focus rings */
+  --on-letter: #faf5eb;  /* cream text on ink */
+  --letter-2: #344b53;   /* supporting text on paper and blue */
+  --signal: #176b57;     /* deep green, primary actions */
+  --on-signal: #faf5eb;  /* cream text on green */
+  --highlight: #bceacb;  /* fresh mint, practice and interaction highlights */
+  --accent-blue: #a9d1e0; /* stronger blue, the interactive lesson */
+  --link: #285f85;       /* blue, text links */
 
   /* Type: family and weights */
-  --sans: "Rubik", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --w-black: 900;        /* headline, section headings, button */
-  --w-heavy: 800;        /* row names, table headings */
-  --w-bold: 700;         /* navigation */
-  --w-medium: 500;       /* supporting lines */
+  --sans: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --w-black: 700;        /* headline and section headings */
+  --w-heavy: 600;        /* row names, table headings */
+  --w-bold: 600;         /* navigation and buttons */
+  --w-medium: 400;       /* supporting lines */
 
   /* Type: sizes, largest first */
-  --display-1: clamp(2.5rem, 4.4vw, 4rem);      /* page headline */
-  --display-1-small: clamp(1.875rem, 9.6vw, 2.5rem); /* page headline on narrow phones */
-  --display-2: clamp(2.125rem, 4.4vw, 3.5rem);  /* section headings */
+  --display-1: clamp(3.5rem, 6.4vw, 5.75rem);  /* page headline */
+  --display-1-small: clamp(2.625rem, 11vw, 3.5rem); /* headline on narrow phones */
+  --display-2: clamp(2.5rem, 4.8vw, 4.5rem);   /* section headings */
   --display-3: clamp(1.625rem, 3vw, 2.5rem);    /* Get involved row names */
   --display-4: clamp(1.75rem, 3vw, 2.375rem);   /* About and Contact headings */
   --lede: clamp(1.25rem, 2vw, 1.6875rem);       /* line under the headline */
@@ -39,9 +41,10 @@
   --leading: 1.5;
 
   /* Shape and space */
-  --rule: 3px;           /* thickness of the dividing lines and outlines */
+  --rule: 1.5px;         /* fine ink-like dividing lines and outlines */
   --rule-thin: 1.5px;    /* not used at the moment */
   --radius: 8px;
+  --radius-pill: 999px;  /* primary call to action */
   --radius-large: 10px;  /* not used at the moment */
   --radius-small: 4px;   /* focus rings */
   --page: 90rem;         /* widest the layout gets */
