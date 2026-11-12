@@ -2,7 +2,7 @@
 
 The public-facing site for the new center. It is a sketch: the name, logo, colours and most of the copy are placeholders until the design guide and final content arrive.
 
-One page, plain HTML and CSS. No build step, no JavaScript, no dependencies.
+One page, plain HTML and CSS, with a small script to keep anchor links clear of the sticky header. No build step or dependencies.
 
 ## Preview it
 
@@ -22,6 +22,7 @@ If `node` is not found, use the full path: `C:\Users\mcreed\tools\nodejs\node.ex
 | `css/tokens.css` | Every colour, font, size and radius |
 | `css/site.css` | Layout and components |
 | `css/fonts.css` | Font declarations |
+| `scripts/header.js` | Keeps anchor scroll spacing aligned with the header height |
 | `fonts/` | Self-hosted font files |
 | `icons/favicon.svg` | Placeholder browser-tab icon |
 | `_headers` | Headers Cloudflare Pages will send |

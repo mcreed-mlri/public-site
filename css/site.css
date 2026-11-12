@@ -5,7 +5,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  scroll-padding-top: 1rem;
+  scroll-padding-top: calc(var(--header-height, 12rem) + 1rem);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -42,7 +42,8 @@ a { color: inherit; }
 
 /* Skip link: hidden until focused from the keyboard. */
 .skip {
-  position: absolute;
+  position: fixed;
+  z-index: 20;
   left: var(--gutter);
   top: 0;
   transform: translateY(-130%);
@@ -57,6 +58,9 @@ a { color: inherit; }
 
 /* Masthead */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   background: var(--letter);
   color: var(--on-letter);
 }
