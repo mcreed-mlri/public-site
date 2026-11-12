@@ -140,7 +140,7 @@ a { color: inherit; }
   font-weight: var(--w-black);
   font-size: var(--display-1);
   line-height: 0.98;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   text-wrap: balance;
 }
 .opening h1 span { display: block; }
@@ -182,7 +182,7 @@ h2 {
   font-weight: var(--w-black);
   font-size: var(--display-2);
   line-height: 1.08;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.035em;
   text-wrap: balance;
 }
 

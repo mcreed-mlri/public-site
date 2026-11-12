@@ -22,9 +22,11 @@
   --link: #1f5f7a;       /* deep sky, text links (hub --brand) */
 
   /* Type: family and weights */
-  --sans: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --w-black: 700;        /* headline and section headings */
-  --w-heavy: 600;        /* row names, table headings */
+  /* Geist, as in the Learning Hub. Heavy and tight for headings, the same
+     voice as the hub's page titles. */
+  --sans: "Geist", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --w-black: 800;        /* headline and section headings */
+  --w-heavy: 700;        /* row names, table headings */
   --w-bold: 600;         /* navigation and buttons */
   --w-medium: 400;       /* supporting lines */
 
