@@ -1,0 +1,23 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "geist",
+        "createdAt": "2026-11-13T19:02:59.723Z",
+        "reason": "Deliberate: commit 4e5d6e0 adopted Geist to match the Learning Hub's typeface (merged PR #1)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-13T19:03:00.204Z",
+        "reason": "Deliberate: commit 0f863fd matched the Learning Hub's warm paper background (merged PR #1)"
+      }
+    ]
+  }
+}

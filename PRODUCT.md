@@ -24,7 +24,7 @@ Success for this site (confirmed): a visitor leaves understanding the idea, mean
 
 ## Positioning
 
-Training for legal aid work that is built around the pace of day-to-day practice: short, self-paced, designed around how adults learn, and shared across organizations rather than scattered inside each one. Built with and for the Massachusetts legal aid community; the site goes all in on Massachusetts (confirmed).
+Training for legal aid work that is built around the pace of day-to-day practice: short, self-paced, designed around how adults learn, and shared across organizations rather than scattered inside each one. Built with and for the legal aid community. The site does not name Massachusetts or any other state outside MLRI's name, so advocates in neighboring states such as Rhode Island do not feel excluded (confirmed, 2026-11-13).
 
 ## Operating Context
 
@@ -39,7 +39,7 @@ Training for legal aid work that is built around the pace of day-to-day practice
 - All colour, font, size and radius values live in `css/tokens.css` so the design guide can be applied in one file.
 - Placeholders are wrapped in `<span data-todo>` and must stay findable until filled.
 - Undecided: center name, contact email address, destinations for the Get involved rows, learning platform URL, sign-up and eligibility, mission statement, funder acknowledgment.
-- Writing rules: short and direct, no em dashes. No launch dates, statistics or course counts; roadmap items carry no dates. Do not mention the LMS vendor, security work or CLE credit. Massachusetts is the stated focus. Any plan beyond Massachusetts is private for now and is never mentioned or hinted at on the site (confirmed).
+- Writing rules: short and direct, no em dashes. No launch dates, statistics or course counts; roadmap items carry no dates. Do not mention the LMS vendor, security work or CLE credit. No state is named except inside MLRI's name. Any expansion plan is private for now and is never mentioned or hinted at on the site (confirmed).
 
 ## Brand Commitments
 

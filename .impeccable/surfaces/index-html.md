@@ -7,7 +7,7 @@ related_targets: []
 
 # Surface brief: home page (index.html)
 
-Mode: Persuade. Audience: an even mix of learners, legal aid supervisors, faculty and contributors, funders and partners. Job: understand the idea (short, self-paced training that fits around casework) and see how they might get involved. Proof on hand: the page copy and the MLRI relationship only. Constraints: interim look until the design firm's guide arrives; all values re-skinnable from `css/tokens.css`; Massachusetts only; no dates or counts; placeholders stay marked with `data-todo`.
+Mode: Persuade. Audience: an even mix of learners, legal aid supervisors, faculty and contributors, funders and partners. Job: understand the idea (short, self-paced training that fits around casework) and see how they might get involved. Proof on hand: the page copy and the MLRI relationship only. Constraints: interim look until the design firm's guide arrives; all values re-skinnable from `css/tokens.css`; no state named outside MLRI's name; no dates or counts; placeholders stay marked with `data-todo`.
 
 Page order (current; the workday table and roadmap were later removed, and the user chose a lesson wireframe over the workday illustration): hero (headline beside one drawn lesson screen with Learn, Practice and Refer back areas, labelled as an illustration; the example is a client conversation, not courtroom work, because most legal aid work happens outside court), Legal Aid Litigation Skills (four skill areas), Get involved (four linked rows with arrows, each leading to Contact until it has its own page), About and Contact, footer.
 
@@ -15,7 +15,7 @@ Unresolved: center name, contact inbox, destinations for the four Get involved r
 
 ## Direction contract
 
-THESIS: The page is a plain-spoken build sheet for Massachusetts legal aid training, set in the flat colour and heavy black outline of an instruction booklet. It refuses the white program page with a hero, a button and three feature cards, and it refuses the navy and gold of MLRI's public help site, Mass Legal Help, which an earlier navy version sat too close to.
+THESIS: The page is a plain-spoken build sheet for legal aid training, set in the flat colour and heavy black outline of an instruction booklet. It refuses the white program page with a hero, a button and three feature cards, and it refuses the navy and gold of MLRI's public help site, Mass Legal Help, which an earlier navy version sat too close to.
 
 OWN-WORLD: Sky-blue field (#b8d8ee) alternating with white bands, black lettering (#111111), 3px black rules and outlines, generous side margins. Yellow (#f2cf3a) marks where the visitor acts and appears only on the Practice area of the lesson wireframe and on any button. The headline highlight behind Massachusetts was removed at the user's request. No red and no other accent. Rubik in heavy weights at display scale. A drawn arrow ends each Get involved row. No cards, icon tiles, brick drawings or shadows.
 
