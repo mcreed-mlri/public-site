@@ -67,7 +67,7 @@ The "A day in legal aid" table is an example, not a real schedule. Keep the "Ill
 - Short and direct. No em dashes.
 - No launch dates, statistics or course counts until the team confirms them.
 - Do not mention the LMS vendor, security work, or CLE credit.
-- Massachusetts is the focus. Say so plainly. Do not mention any plans beyond Massachusetts; those are private for now.
+- Do not name Massachusetts or any other state, except inside MLRI's name. The team does not want advocates outside Massachusetts (for example in Rhode Island) to feel excluded. Do not mention any expansion plans; those are private for now.
 
 ## Launch checklist
 
