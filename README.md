@@ -38,7 +38,7 @@ When one is filled in, replace the text and remove the `data-todo` attribute.
 ### Names
 
 - **Center for Legal Aid Education and Practice (CLAEP):** the center. The header shows `CLAEP` with the full name beneath it. The full name appears in the `<title>`, the header note and the About section.
-- **Legal Aid Training Hub:** the online learning platform, formerly the Learning Hub. It is the pill link in the nav and is introduced in the About section. Where legal aid is already clear from context, "Training Hub" is fine. Do not make an acronym for it, and do not build the center's acronym into its name.
+- **Legal Aid Training Hub:** the online learning platform, formerly the Learning Hub. It is the "Training Hub" pill link in the header (the short form, since the Center's full name sits right beside it) and is introduced in the About section. Where legal aid is already clear from context, "Training Hub" is fine. Do not make an acronym for it, and do not build the center's acronym into its name.
 
 Spell out the center's full name the first time it appears in a section, then use CLAEP.
 
