@@ -76,17 +76,29 @@ a { color: inherit; }
   gap: 0.75rem 2rem;
   padding: 1.25rem 0 1.125rem;
 }
+/* Typographic lockup standing in for a logo: a heavy ink bar, the acronym set
+   large and tight, the full name small in tracked capitals. Replace the whole
+   block with the real mark when the design firm delivers it. */
+.lockup {
+  padding-left: 0.875rem;
+  border-left: 6px solid var(--letter);
+}
 .wordmark {
   display: block;
   font-weight: var(--w-black);
-  font-size: var(--title);
-  line-height: 1.3;
+  font-size: 2.25rem;
+  line-height: 1;
+  letter-spacing: -0.01em;
   text-decoration: none;
 }
 .mast-note {
-  font-size: var(--text-note);
-  line-height: 1.4;
-  color: var(--letter-2);
+  margin-top: 0.3125rem;
+  font-size: 0.75rem;
+  font-weight: var(--w-bold);
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--letter);
 }
 
 .site-nav { margin-left: auto; }
@@ -477,8 +489,11 @@ h2 {
   .mast { padding: 0.75rem 0 0.375rem; }
   .hub-link { padding: 0.375rem 0.875rem; font-size: 0.9375rem; }
   .site-nav ul { gap: 0 1.25rem; font-size: 1rem; }
-  .wordmark { font-size: 1.25rem; line-height: 1.25; }
-  .mast-note { font-size: 0.8125rem; line-height: 1.3; }
+  .lockup { padding-left: 0.625rem; border-left-width: 4px; }
+  .wordmark { font-size: 1.625rem; }
+  .mast-note { margin-top: 0.25rem; font-size: 0.625rem; letter-spacing: 0.06em; }
+  /* The long hub name may wrap to two lines so the name beside it keeps room. */
+  .hub-link { white-space: normal; text-align: center; line-height: 1.2; }
 }
 @media (max-width: 24rem) {
   .site-nav ul { gap: 0 0.875rem; font-size: 0.9375rem; }

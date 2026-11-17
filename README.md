@@ -31,14 +31,16 @@ If `node` is not found, use the full path: `C:\Users\mcreed\tools\nodejs\node.ex
 
 Anything waiting on the team or the design firm is wrapped in `<span data-todo>` and shows a dotted underline in the browser. Search `index.html` for `data-todo` to find them all:
 
-1. The center name, shown as `[Center name]` (also in the `<title>`)
-2. The contact email address
+1. The contact email address
 
 When one is filled in, replace the text and remove the `data-todo` attribute.
 
-### Set the name
+### Names
 
-Find and replace `[Center name]` across `index.html`. It appears three times.
+- **Center for Legal Aid Education and Practice (CLAEP):** the center. The header shows `CLAEP` with the full name beneath it. The full name appears in the `<title>`, the header note and the About section.
+- **Legal Aid Training Hub:** the online learning platform, formerly the Learning Hub. It is the "Training Hub" pill link in the header (the short form, since the Center's full name sits right beside it) and is introduced in the About section. Where legal aid is already clear from context, "Training Hub" is fine. Do not make an acronym for it, and do not build the center's acronym into its name.
+
+Spell out the center's full name the first time it appears in a section, then use CLAEP.
 
 ### Apply the design guide
 
@@ -71,13 +73,12 @@ The "A day in legal aid" table is an example, not a real schedule. Keep the "Ill
 
 ## Launch checklist
 
-1. Replace `[Center name]` everywhere.
-2. Fill in or remove every `data-todo` item.
-3. Delete the `[data-todo]` rule at the bottom of `css/site.css`.
-4. Remove the `noindex` meta tag from `index.html`.
-5. Remove the `X-Robots-Tag: noindex` line from `_headers`.
-6. Replace `icons/favicon.svg` with the real mark.
-7. Confirm the footer copyright line.
+1. Fill in or remove every `data-todo` item.
+2. Delete the `[data-todo]` rule at the bottom of `css/site.css`.
+3. Remove the `noindex` meta tag from `index.html`.
+4. Remove the `X-Robots-Tag: noindex` line from `_headers`.
+5. Replace `icons/favicon.svg` with the real mark.
+6. Confirm the footer copyright line.
 
 ## Deploy (later)
 

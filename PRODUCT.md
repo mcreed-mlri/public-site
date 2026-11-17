@@ -38,13 +38,14 @@ Training for legal aid work that is built around the pace of day-to-day practice
 - Today: one page of plain HTML and CSS, no build step, no JavaScript, self-hosted fonts, intended for Cloudflare Pages. None of these are fixed (confirmed): JavaScript, more pages and revised copy are all open if the design needs them.
 - All colour, font, size and radius values live in `css/tokens.css` so the design guide can be applied in one file.
 - Placeholders are wrapped in `<span data-todo>` and must stay findable until filled.
-- Undecided: center name, contact email address, destinations for the Get involved rows, learning platform URL, sign-up and eligibility, mission statement, funder acknowledgment.
+- Names (confirmed, 2026-11-17): the center is the Center for Legal Aid Education and Practice (CLAEP). The learning platform, formerly the Learning Hub, is the Legal Aid Training Hub, shortened to "Training Hub" where legal aid is already clear. The design firm advises against building the center's acronym into the program name, so the Hub has no acronym. CLAEP is fine after the full name has been spelled out. Brand hierarchy: MLRI, then the Center, then its programs, including the Hub.
+- Undecided: contact email address, destinations for the Get involved rows, learning platform URL, sign-up and eligibility, mission statement, funder acknowledgment.
 - Writing rules: short and direct, no em dashes. No launch dates, statistics or course counts; roadmap items carry no dates. Do not mention the LMS vendor, security work or CLE credit. No state is named except inside MLRI's name. Any expansion plan is private for now and is never mentioned or hinted at on the site (confirmed).
 
 ## Brand Commitments
 
 - A project of the Massachusetts Law Reform Institute; the MLRI attribution and link stay.
-- No name, logo or palette is committed yet. The current colours and fonts are placeholders.
+- The name is set (CLAEP; the platform is the Legal Aid Training Hub). No logo or palette is committed yet. The current colours and fonts are placeholders.
 
 ## Evidence on Hand
 
